@@ -1,18 +1,18 @@
 {% set name = "servicestack" %}
-{% set version = "0.0.8" %}
+{% set version = "0.1.1" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 4874987b82e81a8eeb146b53df6b282f48f843aa1e4f17eecc24d723dc3c5247
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 9c1fb072efa64643dba3dec234b57d17bc7b39d6ed85866b1ed613c5c1d36b7b
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -32,13 +32,13 @@ test:
     - python -m unittest tests.test_serialization.TestSerialization
 
 about:
-  home: "https://github.com/ServiceStack/servicestack-python"
+  home: https://github.com/ServiceStack/servicestack-python
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: "ServiceStack Python Service Clients"
-  doc_url: "https://github.com/ServiceStack/servicestack-python"
-  dev_url: "https://github.com/ServiceStack/servicestack-python"
+  summary: ServiceStack Python Service Clients
+  doc_url: https://github.com/ServiceStack/servicestack-python
+  dev_url: https://github.com/ServiceStack/servicestack-python
 
 extra:
   recipe-maintainers:
