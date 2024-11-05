@@ -1,5 +1,5 @@
 {% set name = "servicestack" %}
-{% set version = "0.1.2" %}
+{% set version = "0.1.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 148e092627f4061d015352d90b85c6f608e427b7c1e25c11e83bb9204edba927
+  sha256: 9743e4e355281db635134f32b0833224bbf6e4cfcd0316ae8ef5f99b4285a689
 
 build:
   noarch: python
